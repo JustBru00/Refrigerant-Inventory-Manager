@@ -1,0 +1,6 @@
+inventory:
+   identifier_barcode:
+      name: ''
+      refrigerantType: ''
+      checkInWeight: 0.0
+      returnWeight: 0.0
