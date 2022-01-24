@@ -16,6 +16,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.awt.Font;
 
 /**
  * Refrigerant-Inventory-Manager is a simple inventory management program.
@@ -62,7 +63,7 @@ public class GUIWindow {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 669, 373);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
@@ -74,9 +75,11 @@ public class GUIWindow {
 		mainPanel.add(identifierBarcodePanel);
 		
 		JLabel identiferBarcodeLabel = new JLabel("ID Barcode:");
+		identiferBarcodeLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		identifierBarcodePanel.add(identiferBarcodeLabel);
 		
 		idenfiferBarcodeTxtField = new JTextField();
+		idenfiferBarcodeTxtField.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		idenfiferBarcodeTxtField.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -95,9 +98,11 @@ public class GUIWindow {
 		mainPanel.add(itemNamePanel);
 		
 		JLabel itemNameLabel = new JLabel("Item Name:");
+		itemNameLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		itemNamePanel.add(itemNameLabel);
 		
 		itemNameTxtField = new JTextField();
+		itemNameTxtField.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		itemNameTxtField.setColumns(20);
 		itemNamePanel.add(itemNameTxtField);
 		
@@ -105,9 +110,11 @@ public class GUIWindow {
 		mainPanel.add(refrigerantTypePanel);
 		
 		JLabel refrigerantTypeLabel = new JLabel("Refrigerant Type:");
+		refrigerantTypeLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		refrigerantTypePanel.add(refrigerantTypeLabel);
 		
 		refrigerantTypeTxtField = new JTextField();
+		refrigerantTypeTxtField.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		refrigerantTypePanel.add(refrigerantTypeTxtField);
 		refrigerantTypeTxtField.setColumns(20);
 		
@@ -115,9 +122,11 @@ public class GUIWindow {
 		mainPanel.add(checkInWeightPanel);
 		
 		JLabel checkInWeightLabel = new JLabel("Check-In Weight");
+		checkInWeightLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		checkInWeightPanel.add(checkInWeightLabel);
 		
 		checkInWeightTxtField = new JTextField();
+		checkInWeightTxtField.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		checkInWeightPanel.add(checkInWeightTxtField);
 		checkInWeightTxtField.setColumns(20);
 		
@@ -125,9 +134,11 @@ public class GUIWindow {
 		mainPanel.add(returnWeightPanel);
 		
 		JLabel returnWeightLabel = new JLabel("Return Weight");
+		returnWeightLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		returnWeightPanel.add(returnWeightLabel);
 		
 		returnWeightTxtField = new JTextField();
+		returnWeightTxtField.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		returnWeightPanel.add(returnWeightTxtField);
 		returnWeightTxtField.setColumns(20);
 		
@@ -135,6 +146,7 @@ public class GUIWindow {
 		mainPanel.add(loadSaveButtonPanel);
 		
 		loadButton = new JButton("Load");
+		loadButton.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		loadButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String id = idenfiferBarcodeTxtField.getText();
@@ -158,6 +170,7 @@ public class GUIWindow {
 		loadSaveButtonPanel.add(loadButton);
 		
 		saveButton = new JButton("Save");
+		saveButton.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String id = idenfiferBarcodeTxtField.getText();
